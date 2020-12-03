@@ -1,4 +1,4 @@
-package main;
+package listnode;
 
 /// spec reference : https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
 interface LinkedListADT extends Cloneable, Iterable<Integer> {

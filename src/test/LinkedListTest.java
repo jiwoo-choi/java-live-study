@@ -1,8 +1,8 @@
 package test;
 
-import main.LinkedList;
+import listnode.LinkedList;
 import java.util.*;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

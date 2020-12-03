@@ -1,4 +1,4 @@
-package main;
+package listnode;
 
 /** TODO : toString, iteratable 구현할것 subscriptor 구현할것, null 대응할것. */
 
