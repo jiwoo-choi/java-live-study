@@ -1,22 +1,9 @@
 package listnode;
-/** TODO : toString, iteratable 구현할것 subscriptor 구현할것, null 대응할것. */
 
 import java.util.*;
 import java.util.function.Consumer;
-/** TODO :
- * nullable checd?
- * logn시간으로 줄여버리는 interpolate 방식의 문제 찾기 (sorted되어있다는 가정하에)
- * 인덱스는 그렇게 할 수 있음. 인덱스는 중
- *
- *
- * 네임스페이스가 바뀌었음. 이거메이븐처리
- */
 
 public class LinkedList implements LinkedListADT {
-
-    /**
-     * 이터레이터 사용을 위해 만든 이터레이터 클래스.
-     */
 
     private class Itr implements Iterator<Integer> {
 
@@ -260,9 +247,6 @@ public class LinkedList implements LinkedListADT {
     public Integer removeFirst() {
         return remove(0);
     }
-
-
-    //https://opentutorials.org/module/1335/8857
 
 
 }
