@@ -64,12 +64,7 @@ class ListNodeStackTest {
     @Test
     void stack_pop_error() {
         ListNodeStack st = new ListNodeStack();
-        try {
-            st.pop();
-            fail("Expected : EmptyStackException should be thrown.");
-        } catch (EmptyStackException e) {
-        } catch (Exception e) {
-            fail("Expected : EmptyStackException should be thrown.");
-        }
+        assertThrows(EmptyStackException.class, ()->{ st.pop(); });
+
     }
 }

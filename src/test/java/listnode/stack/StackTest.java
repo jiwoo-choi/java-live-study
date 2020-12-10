@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StackTest {
 
@@ -72,13 +71,7 @@ class StackTest {
     @Test
     void stack_pop_error() {
         Stack st = new Stack(2);
-        try {
-            st.pop();
-            fail("Expected : EmptyStackException should be thrown.");
-        } catch (EmptyStackException e) {
-        } catch (Exception e) {
-            fail("Expected : EmptyStackException should be thrown.");
-        }
+        assertThrows(EmptyStackException.class, ()->{ st.pop(); });
     }
 
     @Test
