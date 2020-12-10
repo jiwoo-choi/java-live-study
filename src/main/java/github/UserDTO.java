@@ -29,6 +29,7 @@ public class UserDTO {
         int total = participation.size();
         long trueCount = participation.stream().filter( (val) -> val.equals(Boolean.TRUE)).count();
         this.participationRate = (trueCount == 0) ? 0 : (trueCount / (double)total) * 100;
+        this.stateChanged = false;
         return this.participationRate;
     }
 
