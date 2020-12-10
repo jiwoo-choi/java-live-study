@@ -34,10 +34,13 @@ public class GithubList {
             for (GHIssueComment comment : comments) {
                 if (comment.getUser().getLogin().equals(GithubConstant.STUDY_LEADER)) continue;
                 String name = comment.getUser().getLogin();
-                UserDTO user = userManager.getOrDefault(name, new UserDTO(name, totalWeeks));
-                user.setParticipation(thisWeek, true);
                 if (!userManager.containsKey(name)) {
+                    UserDTO user = new UserDTO(name, totalWeeks);
                     userManager.put(name, user);
+                    user.setParticipation(thisWeek, true);
+                } else {
+                    UserDTO user = userManager.get(name);
+                    user.setParticipation(thisWeek, true);
                 }
             }
         }

@@ -29,7 +29,6 @@ public class ListNodeStack implements StackADT {
 
     @Override
     public int pop() {
-        System.out.println(top);
         if (size == 0 || top == null) {
             throw new EmptyStackException();
         } else {

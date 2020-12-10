@@ -4,9 +4,7 @@ import java.util.Objects;
 
 public class ListNode {
 
-    /// Stack을 위해 추가된 기능입니다.
     private ListNode prev = null;
-
     private ListNode next = null;
     private Integer value = null;
 
@@ -88,6 +86,7 @@ public class ListNode {
     }
 
     public boolean contains(ListNode head, ListNode nodeTocheck) {
+        if (nodeTocheck == null) return false;
         ListNode curr = head;
         while ((curr = curr.next) != null) {
             if (Objects.equals(curr, nodeTocheck)) return true;
