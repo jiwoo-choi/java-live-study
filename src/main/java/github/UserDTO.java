@@ -19,10 +19,10 @@ public class UserDTO {
         for( int i = 0 ; i < totalWeeks ; i++) {
             this.participation.add(false);
         }
+        Class<UserDTO> a = UserDTO.class;
     }
 
     public double getParticipationRate() {
-
         if (this.stateChanged != null && stateChanged == false) {
             return this.participationRate;
         }
