@@ -1,29 +1,37 @@
 package tree;
 
+import java.util.ArrayList;
+
 public class RecursiveTraversal extends TraversalEngine {
 
     @Override
-    void doByInorder(Node root) {
-        if (root == null) return;
-        doByInorder(root.left);
-        doByInorder(root.right);
-
+    String doByInorder(Node root) {
+        //String
+        if (root == null) return "";
+        String ret = "";
+        ret += doByInorder(root.left);
+        ret += root.getValue() + " ";
+        ret += doByInorder(root.right);
+        return ret;
     }
 
     @Override
-    void doByPostOrder(Node root) {
-        if (root == null) return;
-        doByPostOrder(root.left);
-        doByPostOrder(root.right);
-        System.out.println(root.getValue());
+    String doByPostOrder(Node root) {
+        if (root == null) return "";
+        String ret = "";
+        ret += doByPostOrder(root.left);
+        ret += doByPostOrder(root.right);
+        ret += root.getValue() + " ";
+        return ret;
     }
 
     @Override
-    void doByPreorder(Node root) {
-        if (root == null) return;
-        doByPreorder(root.left);
-        doByPreorder(root.right);
-        System.out.println(root.getValue());
-
+    String doByPreorder(Node root) {
+        if (root == null) return "";
+        String ret = "";
+        ret += root.getValue() + " ";
+        ret += doByPreorder(root.left);
+        ret += doByPreorder(root.right);
+        return ret;
     }
 }
